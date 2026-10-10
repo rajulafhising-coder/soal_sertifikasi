@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Soal Uji Sertifikasi PPKA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- Login Section -->
+        <div id="login-section" class="section">
+            <div class="header">
+                <h2>Latihan Soal Uji Sertifikasi PPKA</h2>
+                <p>Silakan masukkan data peserta untuk memulai.</p>
+            </div>
+            <div class="form-group">
+                <label for="participant-name">Nama Peserta:</label>
+                <input type="text" id="participant-name" placeholder="Masukkan nama Anda" required>
+            </div>
+            <div class="form-group">
+                <label for="participant-nipp">NIPP:</label>
+                <input type="text" id="participant-nipp" placeholder="Masukkan NIPP Anda" required>
+            </div>
+            <button id="start-btn">Mulai Kuis</button>
+            <p class="created-by">Created by <strong>Mardi Jayadi</strong> (65084)</p>
+        </div>
+
+        <!-- Quiz Section -->
+        <div id="quiz-section" class="section hidden">
+            <div class="quiz-header">
+                <div class="top-bar">
+                    <div class="participant-info">Peserta: <span id="display-name"></span></div>
+                    <div id="timer" class="timer">⏱ 70:00</div>
+                    <div id="progress-text" class="progress-text">Soal 1 / 50</div>
+                </div>
+                <div class="progress-bar-wrap">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+                <h2 id="question">Pertanyaan Teks</h2>
+                <ul>
+                    <li>
+                        <input type="radio" name="answer" id="a" class="answer">
+                        <label for="a" id="a_text">Jawaban A</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="answer" id="b" class="answer">
+                        <label for="b" id="b_text">Jawaban B</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="answer" id="c" class="answer">
+                        <label for="c" id="c_text">Jawaban C</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="answer" id="d" class="answer">
+                        <label for="d" id="d_text">Jawaban D</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <button id="back-btn" class="btn-secondary" disabled>&#8592; Kembali</button>
+                <button id="submit">Jawab &#8594;</button>
+            </div>
+        </div>
+        
+        <!-- Result Section -->
+        <div id="result-section" class="section hidden">
+            <!-- Will be populated by JS -->
+        </div>
+
+        <!-- Review Section -->
+        <div id="review-section" class="section hidden">
+            <!-- Will be populated by JS -->
+        </div>
+    </div>
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
